@@ -35,7 +35,10 @@ if ($controller->config['controller'] == 'home' && $controller->config['namespac
 $defaultDashboard = ['id' => 0];
 
 if ($controller->config['controller'] == 'welcome') {
-    $defaultDashboard = $modx->user->getDashboard();
+    $userDashboard = $modx->user->getDashboard();
+    if (!empty($userDashboard)) {
+        $defaultDashboard = $userDashboard->toArray();
+    }
 }
 
 $lit = $dashboards->getOption('lit', 0);
