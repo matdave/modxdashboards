@@ -1,0 +1,18 @@
+{
+  "autoload": {
+    "psr-4": {
+      "MatDave\\Dashboards\\": "src/"
+    }
+  },
+  "require": {
+      "matdave/modxpackage": "^1.0"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "require-dev": {
+    "modx/revolution": "^3.1"
+  }
+}

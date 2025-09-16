@@ -1,0 +1,40 @@
+{
+  "name": "Dashboards",
+  "lowCaseName": "dashboards",
+  "version": "1.0.0-pl",
+  "description": "Dashboards controller for MODX",
+  "author": "matdave",
+  "package": {
+    "menus": [
+      {
+        "text": "dashboards.menu",
+        "description": "dashboards.menu_desc",
+        "action": "home"
+      }
+    ],
+    "elements": {
+      "plugins": [
+        {
+          "name": "Dashboards",
+          "file": "dashboards.php",
+          "events": [
+            "OnManagerPageBeforeRender"
+          ]
+        }
+      ]
+    },
+    "systemSettings": [
+      {
+        "key": "lit",
+        "value": "0"
+      }
+    ]
+  },
+  "build": {
+    "resolver": {
+      "after": [
+        "lit.php"
+      ]
+    }
+  }
+}
